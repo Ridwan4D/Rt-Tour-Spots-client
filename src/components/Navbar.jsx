@@ -1,6 +1,16 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../provider/AuthProvider";
+import { FaSignOutAlt } from "react-icons/fa";
+import { MdSystemUpdate } from "react-icons/md";
+import userLogo from "../assets/user.png";
 
 const Navbar = () => {
+  const { user, logout } = useContext(AuthContext);
+  // console.log("The user: ", user);
+  const handleLogout = () => {
+    logout();
+  };
   const navLinks = (
     <>
       <li>
@@ -9,6 +19,16 @@ const Navbar = () => {
       <li>
         <NavLink to="/allSpots">All Tourists Spot</NavLink>
       </li>
+      {user && (
+        <li>
+          <NavLink to="/addSpots">Add Tourists Spot</NavLink>
+        </li>
+      )}
+      {user && (
+        <li>
+          <NavLink to="/myList">My List</NavLink>
+        </li>
+      )}
     </>
   );
   return (
@@ -47,18 +67,72 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <div className="text-white space-x-2">
-            <Link to="/signIn">
-              <button className="px-4 bg-slate-800 py-1 rounded-sm hover:bg-white hover:border-b-4 hover:rounded-xl hover:border-gray-900 hover:text-slate-900">
-                Sign In
-              </button>
-            </Link>
-            <Link to="/signUp">
-              <button className="px-4 bg-slate-800 py-1 rounded-sm hover:bg-white hover:border-b-4 hover:rounded-xl hover:border-gray-900 hover:text-slate-900">
-                Sign Up
-              </button>
-            </Link>
-          </div>
+          {user ? (
+            <div className="dropdown dropdown-bottom dropdown-end dropdown-hover">
+              <div
+                tabIndex={0}
+                role="button"
+                className="btn m-1 bg-white border-0"
+              >
+                <img
+                  src={user.photoURL || userLogo}
+                  alt=""
+                  className="h-8 w-8 rounded-full"
+                />
+              </div>
+              <div
+                tabIndex={0}
+                className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                {user.displayName && (
+                  <div className="px-4 py-3 text-sm text-gray-900 dark:text-white">
+                    <div className="font-medium ">{user.displayName}</div>
+                  </div>
+                )}
+                {user.email && (
+                  <div className="px-4 py-3 text-sm text-gray-900 dark:text-white">
+                    <div className="truncate">{user.email}</div>
+                  </div>
+                )}
+                {user.displayName && user.email ? (
+                  <div className="px-4 py-3 text-sm text-gray-900 dark:text-white">
+                    <div className="font-medium ">{user.displayName}</div>
+                    <div className="truncate">{user.email}</div>
+                  </div>
+                ) : (
+                  <Link
+                    to="/updateUserProfile"
+                    className="text-start flex items-center gap-2 px-4 bg-slate-800 py-1 rounded-sm text-white"
+                  >
+                    <span>Add Info</span>
+                    <MdSystemUpdate />
+                  </Link>
+                )}
+
+                <hr />
+                <button
+                  onClick={handleLogout}
+                  className="text-start flex items-center gap-2 px-4 bg-slate-800 py-1 rounded-sm text-white hover:bg-white hover:border-b-4 hover:rounded-xl hover:border-gray-900 hover:text-slate-900"
+                >
+                  <span>Sign Out</span>
+                  <FaSignOutAlt></FaSignOutAlt>
+                </button>
+              </div>
+            </div>
+          ) : (
+            <div className="text-white space-x-2">
+              <Link to="/signIn">
+                <button className="px-4 bg-slate-800 py-1 rounded-sm hover:bg-white hover:border-b-4 hover:rounded-xl hover:border-gray-900 hover:text-slate-900">
+                  Sign In
+                </button>
+              </Link>
+              <Link to="/signUp">
+                <button className="px-4 bg-slate-800 py-1 rounded-sm hover:bg-white hover:border-b-4 hover:rounded-xl hover:border-gray-900 hover:text-slate-900">
+                  Sign Up
+                </button>
+              </Link>
+            </div>
+          )}
         </div>
       </div>
     </div>

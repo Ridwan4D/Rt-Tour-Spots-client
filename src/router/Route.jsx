@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import AllTouristSpot from "../pages/AllTouristSpot";
 import SingIn from "../pages/SingIn";
 import SignUp from "../pages/SignUp";
+import UpdateUserProf from "../pages/UpdateUserProf";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: "/signUp",
         element: <SignUp></SignUp>,
+      },
+      {
+        path: "/updateUserProfile",
+        element: <UpdateUserProf></UpdateUserProf>,
       },
     ],
   },
