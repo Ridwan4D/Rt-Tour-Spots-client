@@ -7,6 +7,7 @@ import SignUp from "../pages/SignUp";
 import UpdateUserProf from "../pages/UpdateUserProf";
 import AddSpot from "../pages/AddSpot";
 import MyList from "../pages/MyList";
+import Details from "../pages/Details";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,7 @@ const router = createBrowserRouter([
       {
         path: "/allSpots",
         element: <AllTouristSpot></AllTouristSpot>,
+        loader: () => fetch("http://localhost:5000/allPlace"),
       },
       {
         path: "/signIn",
@@ -39,7 +41,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/myList",
-        element: <MyList></MyList>
+        element: <MyList></MyList>,
+      },
+      {
+        path: "/details/:id",
+        element: <Details></Details>,
       },
     ],
   },

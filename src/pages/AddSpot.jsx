@@ -1,8 +1,9 @@
-import { useContext } from "react";
-import { AuthContext } from "../provider/AuthProvider";
+// import { useContext } from "react";
+// import { AuthContext } from "../provider/AuthProvider";\
+import toast, { Toaster } from "react-hot-toast";
 
 const AddSpot = () => {
-  const { user } = useContext(AuthContext);
+//   const { user } = useContext(AuthContext);
 
   const handleAddPlace = e =>{
     e.preventDefault();
@@ -18,13 +19,27 @@ const AddSpot = () => {
     const userName = form.userName.value;
     const userEmail = form.userEmail.value;
     const description = form.description.value;
-    const placeInfo ={image,spot,country,location,cost,season,travelTime,perYearVisitor,userName,userEmail,description}
-    console.log(placeInfo);
+    const spotInfo ={image,spot,country,location,cost,season,travelTime,perYearVisitor,userName,userEmail,description}
+    // console.log(spotInfo);
+
+    fetch("http://localhost:5000/addSpots",{
+        method:'POST',
+        headers:{"Content-type":"application/json"},
+        body: JSON.stringify(spotInfo)
+    })
+    .then(res => res.json())
+    .then(data =>{
+        console.log(data);
+        if(data.insertedId){
+            toast.success("Data Added Successfully")
+            form.reset();
+        }
+    })
   }
   return (
     <div>
-      <section className="bg-gray-300 dark:bg-gray-900">
-        <div className="py-8 px-4 mx-auto max-w-5xl lg:py-16 lg:mb-20">
+      <section className="bg-gray-100 dark:bg-gray-900 border-2 rounded-lg lg:mb-20">
+        <div className="py-8 px-4 mx-auto max-w-5xl lg:py-16">
           <h2 className="mb-8 underline text-center text-3xl font-bold text-slate-700 dark:text-white">
             Add a new Place
           </h2>
@@ -186,7 +201,7 @@ const AddSpot = () => {
                   name="userEmail"
                   id="userEmail"
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                  placeholder="Enter Your Email"
+                  placeholder="Enter Logged In Email"
                   required=""
                 />
               </div>
@@ -210,9 +225,10 @@ const AddSpot = () => {
               type="submit"
               className="btn btn-wide mx-auto flex items-center px-5 py-1 mt-4 sm:mt-6 text-base text-gray-400 bg-slate-900 font-medium text-center rounded-lg"
             >
-              Add product
+              Add Place
             </button>
           </form>
+          <Toaster position="top-center" reverseOrder={false} />
         </div>
       </section>
     </div>

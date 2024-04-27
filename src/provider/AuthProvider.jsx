@@ -14,6 +14,7 @@ export const AuthContext = createContext(null);
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [spotDetail,setSpotDetail] = useState({});
 
   // register user with email pass
   const signUpUser = (email, password) => {
@@ -22,16 +23,15 @@ const AuthProvider = ({ children }) => {
   };
 
   // register user with google and github
-  const singUpWithApp = provider =>{
+  const singUpWithApp = (provider) => {
     setLoading(true);
-    return signInWithPopup(auth,provider)
-  }
+    return signInWithPopup(auth, provider);
+  };
 
-
-  const signInUser = (email,password)=>{
-    setLoading(true)
-    return signInWithEmailAndPassword(auth,email,password)
-  }
+  const signInUser = (email, password) => {
+    setLoading(true);
+    return signInWithEmailAndPassword(auth, email, password);
+  };
 
   // update profile
   const profileUpdate = (name, image) => {
@@ -58,7 +58,17 @@ const AuthProvider = ({ children }) => {
     return signOut(auth);
   };
 
-  const authInfo = { user, loading, signUpUser,singUpWithApp,signInUser, profileUpdate, logout };
+  const authInfo = {
+    user,
+    loading,
+    signUpUser,
+    singUpWithApp,
+    signInUser,
+    profileUpdate,
+    logout,
+    spotDetail,
+    setSpotDetail
+  };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
   );
