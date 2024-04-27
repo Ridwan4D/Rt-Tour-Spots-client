@@ -3,6 +3,7 @@ import PropTypes from "prop-types"; // ES6
 import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
+  signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
   updateProfile,
@@ -24,6 +25,12 @@ const AuthProvider = ({ children }) => {
   const singUpWithApp = provider =>{
     setLoading(true);
     return signInWithPopup(auth,provider)
+  }
+
+
+  const signInUser = (email,password)=>{
+    setLoading(true)
+    return signInWithEmailAndPassword(auth,email,password)
   }
 
   // update profile
@@ -51,7 +58,7 @@ const AuthProvider = ({ children }) => {
     return signOut(auth);
   };
 
-  const authInfo = { user, loading, signUpUser,singUpWithApp, profileUpdate, logout };
+  const authInfo = { user, loading, signUpUser,singUpWithApp,signInUser, profileUpdate, logout };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
   );

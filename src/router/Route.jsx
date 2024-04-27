@@ -5,6 +5,8 @@ import AllTouristSpot from "../pages/AllTouristSpot";
 import SingIn from "../pages/SingIn";
 import SignUp from "../pages/SignUp";
 import UpdateUserProf from "../pages/UpdateUserProf";
+import AddSpot from "../pages/AddSpot";
+import MyList from "../pages/MyList";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +32,14 @@ const router = createBrowserRouter([
       {
         path: "/updateUserProfile",
         element: <UpdateUserProf></UpdateUserProf>,
+      },
+      {
+        path: "/addSpots",
+        element: <AddSpot></AddSpot>,
+      },
+      {
+        path: "/myList",
+        element: <MyList></MyList>
       },
     ],
   },

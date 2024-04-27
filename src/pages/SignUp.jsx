@@ -13,7 +13,7 @@ const SignUp = () => {
   const navigate = useNavigate();
   const [upError, setUpError] = useState("");
 
-  // sign up with google
+  // sign up with app
   const handleSignUpWithApp = (provider) => {
     singUpWithApp(provider)
       .then((result) => {

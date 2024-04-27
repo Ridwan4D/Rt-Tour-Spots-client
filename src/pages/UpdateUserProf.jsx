@@ -14,23 +14,26 @@ const UpdateUserProf = () => {
     const image = form.image.value;
     console.log(name, email);
     profileUpdate(name, image).then(() => {
-      toast.success("Profile Updated");
       setTimeout(() => {
         navigate("/");
       }, 1000);
     });
-    const user = {email}
-    fetch("http://localhost:5000/users",{
-        method: "POST",
-        headers:{
-            "content-type": "application/json"
-        },
-        body:JSON.stringify(user),
+    const user = { email };
+    fetch("http://localhost:5000/users", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(user),
     })
-    .then(res => res.json())
-    .then(data =>{
-        console.log(data);
-    })
+      .then((res) => res.json())
+      .then((data) => {
+        // console.log(data);
+        if (data.insertedId) {
+          console.log(data);
+          toast.success("Profile Updated");
+        }
+      });
   };
   return (
     <div>

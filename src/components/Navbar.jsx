@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { FaSignOutAlt } from "react-icons/fa";
 import { MdSystemUpdate } from "react-icons/md";
@@ -7,9 +7,11 @@ import userLogo from "../assets/user.png";
 
 const Navbar = () => {
   const { user, logout } = useContext(AuthContext);
+  const navigate = useNavigate();
   // console.log("The user: ", user);
   const handleLogout = () => {
     logout();
+    navigate("/signIN")
   };
   const navLinks = (
     <>
@@ -84,16 +86,6 @@ const Navbar = () => {
                 tabIndex={0}
                 className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
               >
-                {user.displayName && (
-                  <div className="px-4 py-3 text-sm text-gray-900 dark:text-white">
-                    <div className="font-medium ">{user.displayName}</div>
-                  </div>
-                )}
-                {user.email && (
-                  <div className="px-4 py-3 text-sm text-gray-900 dark:text-white">
-                    <div className="truncate">{user.email}</div>
-                  </div>
-                )}
                 {user.displayName && user.email ? (
                   <div className="px-4 py-3 text-sm text-gray-900 dark:text-white">
                     <div className="font-medium ">{user.displayName}</div>
