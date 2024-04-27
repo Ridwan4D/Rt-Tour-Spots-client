@@ -3,7 +3,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { updateProfile } from "firebase/auth";
-import { GoogleAuthProvider ,GithubAuthProvider } from "firebase/auth";
+import { GoogleAuthProvider, GithubAuthProvider } from "firebase/auth";
 
 const SignUp = () => {
   const { signUpUser, singUpWithApp } = useContext(AuthContext);
@@ -385,7 +385,7 @@ const SignUp = () => {
               </div>
               <div className="w-full lg:w-1/2 ml-0 lg:ml-2">
                 <button
-                onClick={()=>handleSignUpWithApps(githubProvider)}
+                  onClick={() => handleSignUpWithApps(githubProvider)}
                   type="button"
                   className="w-full flex justify-center items-center gap-2 bg-white text-sm text-gray-600 p-2 rounded-md hover:bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200 transition-colors duration-300"
                 >

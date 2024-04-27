@@ -8,6 +8,7 @@ import UpdateUserProf from "../pages/UpdateUserProf";
 import AddSpot from "../pages/AddSpot";
 import MyList from "../pages/MyList";
 import Details from "../pages/Details";
+import PrivetRoute from "./PrivetRoute";
 
 const router = createBrowserRouter([
   {
@@ -37,15 +38,27 @@ const router = createBrowserRouter([
       },
       {
         path: "/addSpots",
-        element: <AddSpot></AddSpot>,
+        element: (
+          <PrivetRoute>
+            <AddSpot></AddSpot>,
+          </PrivetRoute>
+        ),
       },
       {
         path: "/myList",
-        element: <MyList></MyList>,
+        element: (
+          <PrivetRoute>
+            <MyList></MyList>,
+          </PrivetRoute>
+        ),
       },
       {
         path: "/details/:id",
-        element: <Details></Details>,
+        element: (
+          <PrivetRoute>
+            <Details></Details>,
+          </PrivetRoute>
+        ),
       },
     ],
   },

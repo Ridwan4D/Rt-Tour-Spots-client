@@ -6,6 +6,7 @@ import {
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
+  updateEmail,
   updateProfile,
 } from "firebase/auth";
 import auth from "../firebase/firebase.config";
@@ -14,7 +15,7 @@ export const AuthContext = createContext(null);
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [spotDetail,setSpotDetail] = useState({});
+  const [spotDetail, setSpotDetail] = useState({});
 
   // register user with email pass
   const signUpUser = (email, password) => {
@@ -35,10 +36,17 @@ const AuthProvider = ({ children }) => {
 
   // update profile
   const profileUpdate = (name, image) => {
+    setLoading(true);
     return updateProfile(user, {
       displayName: name ? name : user.displayName,
       photoURL: image ? image : user.photoURL,
     });
+  };
+
+  // update email
+  const updateUserEmail = (email) => {
+    setLoading(true);
+    return updateEmail(auth.currentUser, email);
   };
 
   useEffect(() => {
@@ -65,9 +73,10 @@ const AuthProvider = ({ children }) => {
     singUpWithApp,
     signInUser,
     profileUpdate,
+    updateUserEmail,
     logout,
     spotDetail,
-    setSpotDetail
+    setSpotDetail,
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>

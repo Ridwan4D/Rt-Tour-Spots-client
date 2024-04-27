@@ -8,7 +8,7 @@ body {
 }
 
 #navActive a.active {
-    background-color: white;
+    background-color: transparent;
     color: grey;
     text-decoration: underline;
 }

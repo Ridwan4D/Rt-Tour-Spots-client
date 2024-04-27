@@ -4,7 +4,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
 const UpdateUserProf = () => {
-  const { profileUpdate } = useContext(AuthContext);
+  const { profileUpdate, updateUserEmail } = useContext(AuthContext);
   const navigate = useNavigate();
   const handleUpdateUserProfile = (e) => {
     e.preventDefault();
@@ -14,26 +14,16 @@ const UpdateUserProf = () => {
     const image = form.image.value;
     console.log(name, email);
     profileUpdate(name, image).then(() => {
+      // toast.success("Update Successful");
+    });
+    updateUserEmail(email)
+    .then((res) => {
+      toast.success("Update Successful");
+      console.log(res);
       setTimeout(() => {
         navigate("/");
       }, 1000);
     });
-    const user = { email };
-    fetch("http://localhost:5000/users", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(user),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        // console.log(data);
-        if (data.insertedId) {
-          console.log(data);
-          toast.success("Profile Updated");
-        }
-      });
   };
   return (
     <div>
