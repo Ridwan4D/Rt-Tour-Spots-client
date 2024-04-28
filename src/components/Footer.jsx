@@ -19,7 +19,9 @@ const Footer = () => {
           <Link to="/contact" className="link link-hover">
             Contact
           </Link>
-          <a className="link link-hover">Jobs</a>
+          <Link to="/" className="link link-hover">
+            Home
+          </Link>
           <a className="link link-hover">Press kit</a>
         </nav>
         <nav className="flex flex-col">
