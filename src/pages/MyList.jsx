@@ -3,6 +3,7 @@ import { AuthContext } from "../provider/AuthProvider";
 import { MdDelete, MdEdit } from "react-icons/md";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
+import { Tooltip } from "react-tooltip";
 
 const MyList = () => {
   const { user } = useContext(AuthContext);
@@ -69,14 +70,14 @@ const MyList = () => {
                 <td className="text-lg">{spot.cost}</td>
                 <td className="text-lg">{spot.travelTime}</td>
                 <td className="text-lg">
-                  <Link to={`/updateSpots/${spot._id}`} className="btn text-lg">
+                  <Link to={`/updateSpots/${spot._id}`} className="btn text-lg my-anchor-elements">
                     <MdEdit />
                   </Link>
                 </td>
                 <td className="">
                   <button
                     onClick={() => handleDeleteSpot(spot._id)}
-                    className="btn text-lg text-red-600"
+                    className="btn text-lg text-red-600 my-anchor-element"
                   >
                     <MdDelete />
                   </button>
@@ -85,6 +86,12 @@ const MyList = () => {
             ))}
           </tbody>
         </table>
+        <Tooltip anchorSelect=".my-anchor-element" place="right">
+        Delete
+      </Tooltip>
+        <Tooltip anchorSelect=".my-anchor-elements" place="right">
+        Edit
+      </Tooltip>
       </div>
     </div>
   );

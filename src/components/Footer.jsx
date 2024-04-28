@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "react-tooltip/dist/react-tooltip.css";
 
 const Footer = () => {
   return (
@@ -9,7 +10,7 @@ const Footer = () => {
           <a className="link link-hover">Tour Guid</a>
           <a className="link link-hover">Transport</a>
           <a className="link link-hover">Resort</a>
-          <a className="link link-hover">Hotel</a>
+          <a className="link link-hover my-anchor-element">Hotel</a>
         </nav>
         <nav className="flex flex-col">
           <h6 className="footer-title">Company</h6>

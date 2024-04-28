@@ -84,7 +84,7 @@ const Navbar = () => {
               </div>
               <div
                 tabIndex={0}
-                className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+                className="dropdown-content z-[10] menu p-2 shadow bg-base-100 rounded-box w-52"
               >
                 {user.displayName && user.email ? (
                   <div className="px-4 py-3 text-sm text-gray-900 dark:text-white">
