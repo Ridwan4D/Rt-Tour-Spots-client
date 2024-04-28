@@ -9,6 +9,7 @@ import AddSpot from "../pages/AddSpot";
 import MyList from "../pages/MyList";
 import Details from "../pages/Details";
 import PrivetRoute from "./PrivetRoute";
+import UpdateSpotDetails from "../pages/UpdateSpotDetails";
 
 const router = createBrowserRouter([
   {
@@ -51,6 +52,12 @@ const router = createBrowserRouter([
             <MyList></MyList>,
           </PrivetRoute>
         ),
+      },
+      {
+        path: "/updateSpots/:id",
+        element: <UpdateSpotDetails></UpdateSpotDetails>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/allPlace/${params.id}`),
       },
       {
         path: "/details/:id",

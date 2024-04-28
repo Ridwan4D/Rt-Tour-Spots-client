@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import { MdDelete, MdEdit } from "react-icons/md";
-import toast from "react-hot-toast";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 const MyList = () => {
   const { user } = useContext(AuthContext);
@@ -15,8 +15,6 @@ const MyList = () => {
         setSpots(data);
       });
   }, [user]);
-
-  // const handle
 
   const handleDeleteSpot = (_id) => {
     Swal.fire({
@@ -41,8 +39,8 @@ const MyList = () => {
               icon: "success",
             });
             // remove deleted item
-            const remainingSpot = spots.filter(spot=> spot._id !== _id)
-            setSpots(remainingSpot)
+            const remainingSpot = spots.filter((spot) => spot._id !== _id);
+            setSpots(remainingSpot);
           });
       }
     });
@@ -71,9 +69,9 @@ const MyList = () => {
                 <td className="text-lg">{spot.cost}</td>
                 <td className="text-lg">{spot.travelTime}</td>
                 <td className="text-lg">
-                  <button className="btn text-lg">
+                  <Link to={`/updateSpots/${spot._id}`} className="btn text-lg">
                     <MdEdit />
-                  </button>
+                  </Link>
                 </td>
                 <td className="">
                   <button

@@ -1,10 +1,12 @@
 // import { useContext } from "react";
 // import { AuthContext } from "../provider/AuthProvider";\
 import toast, { Toaster } from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 const AddSpot = () => {
 //   const { user } = useContext(AuthContext);
 
+const navigate = useNavigate();
   const handleAddPlace = e =>{
     e.preventDefault();
     const form = e.target;
@@ -33,6 +35,7 @@ const AddSpot = () => {
         if(data.insertedId){
             toast.success("Data Added Successfully")
             form.reset();
+            navigate("/allSpots")
         }
     })
   }
@@ -58,7 +61,7 @@ const AddSpot = () => {
                   id="name"
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                   placeholder="Enter Image URL"
-                  required=""
+                  required
                 />
               </div>
               <div className="w-full">
@@ -74,7 +77,7 @@ const AddSpot = () => {
                   id="spot-name"
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                   placeholder="Enter Spot Name"
-                  required=""
+                  required
                 />
               </div>
               <div className="w-full">
@@ -90,7 +93,7 @@ const AddSpot = () => {
                   id="country"
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                   placeholder="Enter Country Name"
-                  required=""
+                  required
                 />
               </div>
               <div>
@@ -106,7 +109,7 @@ const AddSpot = () => {
                   id="location"
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                   placeholder="Enter Location Name"
-                  required=""
+                  required
                 />
               </div>
               <div>
@@ -122,7 +125,7 @@ const AddSpot = () => {
                   id="item-weight"
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                   placeholder="Enter The Cost"
-                  required=""
+                  required
                 />
               </div>
               <div>
@@ -138,7 +141,7 @@ const AddSpot = () => {
                   id="item-weight"
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                   placeholder="Enter The Season"
-                  required=""
+                  required
                 />
               </div>
               <div>
@@ -154,7 +157,7 @@ const AddSpot = () => {
                   id="travelTime"
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                   placeholder="Enter The Travel Time"
-                  required=""
+                  required
                 />
               </div>
               <div>
@@ -170,7 +173,7 @@ const AddSpot = () => {
                   id="perYearVisitor"
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                   placeholder="Enter Visitor Number"
-                  required=""
+                  required
                 />
               </div>
               <div>
@@ -186,7 +189,7 @@ const AddSpot = () => {
                   id="userName"
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                   placeholder="Enter Your Name"
-                  required=""
+                  required
                 />
               </div>
               <div>
@@ -202,7 +205,7 @@ const AddSpot = () => {
                   id="userEmail"
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                   placeholder="Enter Logged In Email"
-                  required=""
+                  required
                 />
               </div>
               <div className="sm:col-span-2">

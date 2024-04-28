@@ -3,18 +3,18 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="my-10">
-      <footer className="grid grid-cols-2 md:grid-cols-4 gap-y-10 px-3 md:p-10 bg-slate-900 text-white">
+      <footer className="grid grid-cols-2 md:grid-cols-3 gap-y-10 px-3 md:p-10 bg-slate-900 text-white">
         <nav className="flex flex-col">
           <h6 className="footer-title">Services</h6>
-          <a className="link link-hover">Hotel</a>
-          <a className="link link-hover">Motel</a>
+          <a className="link link-hover">Tour Guid</a>
+          <a className="link link-hover">Transport</a>
           <a className="link link-hover">Resort</a>
-          <a className="link link-hover">Guest House</a>
+          <a className="link link-hover">Hotel</a>
         </nav>
         <nav className="flex flex-col">
           <h6 className="footer-title">Company</h6>
           <Link to="/allSpots" className="link link-hover">
-            About us
+            All Spots
           </Link>
           <Link to="/contact" className="link link-hover">
             Contact
