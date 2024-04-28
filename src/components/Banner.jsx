@@ -6,7 +6,7 @@ const Banner = () => {
       <div className="carousel w-full">
         <div
           id="slide1"
-          className="carousel-item h-[70vh] z-10 relative w-full bg-[linear-gradient(180deg,rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(../../public/banner-1.jpg)] bg-cover bg-center bg-no-repeat"
+          className="carousel-item h-[70vh] z-1 relative w-full bg-[linear-gradient(180deg,rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(../../public/banner-1.jpg)] bg-cover bg-center bg-no-repeat"
         >
           <div className="z-100 flex flex-col justify-center items-center w-full">
             <h3 className="text-5xl font-extrabold text-blue-300">

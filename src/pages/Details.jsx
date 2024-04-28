@@ -1,11 +1,10 @@
-import { useContext } from "react";
-import { AuthContext } from "../provider/AuthProvider";
 import { IoMdArrowBack } from "react-icons/io";
-import { Link } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 
 const Details = () => {
-  const { spotDetail } = useContext(AuthContext);
-  // console.log(spotDetail);
+  const spotDetails = useLoaderData();
+  const { id } = useParams();
+  const spotDetail = spotDetails.find((spotDetail) => spotDetail._id == id);
   const {
     image,
     description,
@@ -19,6 +18,7 @@ const Details = () => {
     userEmail,
     userName,
   } = spotDetail;
+
   return (
     <div>
       <div

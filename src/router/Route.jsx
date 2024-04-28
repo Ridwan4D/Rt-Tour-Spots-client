@@ -10,11 +10,15 @@ import MyList from "../pages/MyList";
 import Details from "../pages/Details";
 import PrivetRoute from "./PrivetRoute";
 import UpdateSpotDetails from "../pages/UpdateSpotDetails";
+import Error from "../pages/Error";
+import Contact from "../pages/Contact";
+import SpotsOfCountry from "../pages/SpotsOfCountry";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: "/",
@@ -32,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: "/signUp",
         element: <SignUp></SignUp>,
+      },
+      {
+        path: "/contact",
+        element: <Contact></Contact>
       },
       {
         path: "/updateUserProfile",
@@ -66,6 +74,16 @@ const router = createBrowserRouter([
             <Details></Details>,
           </PrivetRoute>
         ),
+        loader: ()=>fetch(`http://localhost:5000/allPlace/`)
+      },
+      {
+        path: "/countrySpots/:country",
+        element: (
+          <PrivetRoute>
+            <SpotsOfCountry></SpotsOfCountry>
+          </PrivetRoute>
+        ),
+        loader: ()=>fetch(`http://localhost:5000/allPlace/`)
       },
     ],
   },

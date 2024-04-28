@@ -29,7 +29,7 @@ const PrivetRoute = ({ children }) => {
   if (user) {
     return children;
   }
-  return <Navigate to="/signIn"></Navigate>;
+  return <Navigate to="/signIn"  state={location.pathname}></Navigate>;
 };
 PrivetRoute.propTypes = {
   children: PropType.node,

@@ -31,11 +31,16 @@ const Navbar = () => {
           <NavLink to="/myList">My List</NavLink>
         </li>
       )}
+      {user && (
+        <li>
+          <NavLink to="/contact">Contact Us</NavLink>
+        </li>
+      )}
     </>
   );
   return (
     <div>
-      <div className="navbar bg-slate-200 mb-10" id="navActive">
+      <div className="navbar bg-[linear-gradient(to_right,#94a3b8,#e2e8f0,#94a3b8)] mb-10" id="navActive">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -74,12 +79,12 @@ const Navbar = () => {
               <div
                 tabIndex={0}
                 role="button"
-                className="btn m-1 bg-white border-0"
+                className="btn m-1 bg-transparent border-0"
               >
                 <img
                   src={user.photoURL || userLogo}
                   alt=""
-                  className="h-8 w-8 rounded-full"
+                  className="h-9 w-9 rounded-full"
                 />
               </div>
               <div

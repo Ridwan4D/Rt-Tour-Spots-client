@@ -41,7 +41,7 @@ const navigate = useNavigate();
   }
   return (
     <div>
-      <section className="bg-gray-100 dark:bg-gray-900 border-2 rounded-lg lg:mb-20">
+      <section className="bg-[linear-gradient(to_bottom,#cbd5e1,#e2e8f0)] dark:bg-gray-900 border-2 rounded-lg lg:mb-20">
         <div className="py-8 px-4 mx-auto max-w-5xl lg:py-16">
           <h2 className="mb-8 underline text-center text-3xl font-bold text-slate-700 dark:text-white">
             Add a new Place

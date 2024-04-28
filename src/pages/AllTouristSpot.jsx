@@ -6,7 +6,7 @@ const AllTouristSpot = () => {
   // console.log(loadedSpots);
   return (
     <div>
-      <div className="bg-slate-950 py-7  bg-[linear-gradient(to_right,#1c263b,#ffffff,#1c263b)]">
+      <div className="bg-slate-950 py-7  bg-[linear-gradient(to_right,#1c263b,#94a3b8,#1c263b)]">
         <h2 className="text-3xl font-bold text-center text-slate-700">
           All The Tourist Spot is here
         </h2>

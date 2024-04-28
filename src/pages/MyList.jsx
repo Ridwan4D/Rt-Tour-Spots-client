@@ -83,7 +83,7 @@ const MyList = () => {
                     <MdEdit />
                   </Link>
                 </td>
-                <td className="">
+                <td>
                   <button
                     onClick={() => handleDeleteSpot(spot._id)}
                     className="btn text-lg text-red-600 my-anchor-element"

@@ -7,7 +7,7 @@ const HomeSpots = () => {
     fetch("http://localhost:5000/allPlace")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setSpots(data);
       });
   }, []);

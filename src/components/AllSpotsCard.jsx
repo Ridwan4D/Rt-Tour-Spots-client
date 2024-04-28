@@ -1,10 +1,7 @@
 import PropType from "prop-types";
-import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { AuthContext } from "../provider/AuthProvider";
 
 const AllSpotsCard = ({ theSpot }) => {
-    const {setSpotDetail} = useContext(AuthContext)
   const {
     _id,
     country,
@@ -15,16 +12,6 @@ const AllSpotsCard = ({ theSpot }) => {
     spot,
     travelTime,
   } = theSpot;
- 
-  const handleGetData = _id =>{
-    fetch(`http://localhost:5000/allPlace/${_id}`)
-    .then(res => res.json())
-    .then(data => {
-        // console.log(data);
-        setSpotDetail(data)
-    })
-  }
-
 
   return (
     <div>
@@ -135,9 +122,7 @@ const AllSpotsCard = ({ theSpot }) => {
 
             <div className="flex justify-center">
               <Link to={`/details/${_id}`}>
-                <button
-                onClick={()=>handleGetData(_id)}
-                className="btn-wide text-white bg-gradient-to-r from-slate-500 via-slate-600 to-slate-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-slate-300 dark:focus:ring-slate-800 shadow-lg shadow-slate-500/50 dark:shadow-lg dark:shadow-slate-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 ">
+                <button className="btn-wide text-white bg-gradient-to-r from-slate-500 via-slate-600 to-slate-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-slate-300 dark:focus:ring-slate-800 shadow-lg shadow-slate-500/50 dark:shadow-lg dark:shadow-slate-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 ">
                   View Details
                 </button>
               </Link>
