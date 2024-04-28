@@ -4,6 +4,7 @@ import { MdDelete, MdEdit } from "react-icons/md";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
 import { Tooltip } from "react-tooltip";
+import { Fade } from "react-awesome-reveal";
 
 const MyList = () => {
   const { user } = useContext(AuthContext);
@@ -48,6 +49,11 @@ const MyList = () => {
   };
   return (
     <div>
+      <Fade direction="right">
+        <div className="my-5 border-l-8 border-b-8 border-gray-800 pl-1 pb-1">
+          <h3 className="text-3xl font-bold">Tourist Spots You Have Added</h3>
+        </div>
+      </Fade>
       <div className="overflow-x-auto">
         <table className="table table-xs">
           <thead>
@@ -70,7 +76,10 @@ const MyList = () => {
                 <td className="text-lg">{spot.cost}</td>
                 <td className="text-lg">{spot.travelTime}</td>
                 <td className="text-lg">
-                  <Link to={`/updateSpots/${spot._id}`} className="btn text-lg my-anchor-elements">
+                  <Link
+                    to={`/updateSpots/${spot._id}`}
+                    className="btn text-lg my-anchor-elements"
+                  >
                     <MdEdit />
                   </Link>
                 </td>
@@ -87,11 +96,11 @@ const MyList = () => {
           </tbody>
         </table>
         <Tooltip anchorSelect=".my-anchor-element" place="right">
-        Delete
-      </Tooltip>
+          Delete
+        </Tooltip>
         <Tooltip anchorSelect=".my-anchor-elements" place="right">
-        Edit
-      </Tooltip>
+          Edit
+        </Tooltip>
       </div>
     </div>
   );
