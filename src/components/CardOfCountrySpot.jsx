@@ -1,8 +1,8 @@
 import PropType from "prop-types";
 import { Link, useLocation } from "react-router-dom";
 const CardOfCountrySpot = ({ aCountry }) => {
-    const located = useLocation();
-//   console.log(aCountry);
+  const located = useLocation();
+  //   console.log(aCountry);
   const { _id, spot, country, location, description, cost, season } = aCountry;
   return (
     <div>
@@ -26,19 +26,19 @@ const CardOfCountrySpot = ({ aCountry }) => {
               {description}
             </p>
             <div className="flex justify-between">
-            <p className="text-sm bg-gradient-to-r from-slate-200 font-medium to-slate-50">
-            <span className="font-semibold">Cost: </span>
-              {cost}
-            </p>
-            <p className="text-sm bg-gradient-to-r from-slate-200 font-medium to-slate-50">
-            <span className="font-semibold">Season: </span>
-              {season}
-            </p>
+              <p className="text-sm bg-gradient-to-r from-slate-200 font-medium to-slate-50">
+                <span className="font-semibold">Cost: </span>
+                {cost}
+              </p>
+              <p className="text-sm bg-gradient-to-r from-slate-50 font-medium to-slate-200">
+                <span className="font-semibold">Season: </span>
+                {season}
+              </p>
             </div>
 
             <div className="flex justify-center">
               <Link to={`/details/${_id}`} state={located.pathname}>
-                <button className="btn-wide text-white bg-gradient-to-r from-slate-700 via-slate-600 to-slate-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-slate-300 dark:focus:ring-slate-800 shadow-lg shadow-slate-500/50 dark:shadow-lg dark:shadow-slate-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 ">
+                <button className="btn-wide text-white bg-gradient-to-r from-slate-500 via-slate-600 to-slate-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-slate-300 dark:focus:ring-slate-800 shadow-lg shadow-slate-500/50 dark:shadow-lg dark:shadow-slate-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 ">
                   View Details
                 </button>
               </Link>

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Banner from "../components/Banner";
 import HomeSpots from "../components/HomeSpots";
 import CountryCard from "../components/CountryCard";
+import Exclusive from "../components/Exclusive";
 
 const Home = () => {
   const [countries, setCountries] = useState([]);
@@ -35,6 +36,8 @@ const Home = () => {
           ))}
         </div>
       </div>
+      {/* exclusive */}
+      <Exclusive></Exclusive>
     </div>
   );
 };
