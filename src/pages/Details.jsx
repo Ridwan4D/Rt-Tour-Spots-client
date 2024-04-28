@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Details = () => {
   const { spotDetail } = useContext(AuthContext);
-  console.log(spotDetail);
+  // console.log(spotDetail);
   const {
     image,
     description,
