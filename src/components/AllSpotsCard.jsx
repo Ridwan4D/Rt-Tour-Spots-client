@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 const AllSpotsCard = ({ theSpot }) => {
   const {
     _id,
-    country,
     image,
     perYearVisitor,
     season,
@@ -21,9 +20,6 @@ const AllSpotsCard = ({ theSpot }) => {
           <div className="flex items-center space-x-2">
             <div className="-space-y-1 ">
               <h2 className="text-base font-semibold leading-none">{spot}</h2>
-              <span className="inline-block text-sm leading-none dark:text-gray-600">
-                {country}
-              </span>
             </div>
           </div>
           <button title="Open options" type="button">

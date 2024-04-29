@@ -24,7 +24,7 @@ const AllTouristSpot = () => {
       <div>
         <form className="text-center my-10">
           <label htmlFor="sort"></label>
-          <select name="sort" id="sort" className="border-2 px-3 py-1 rounded-md border-orange-300 outline-2 outline-slate-600" onClick={handleAscending}>
+          <select name="sort" id="sort" className="border-2 px-3 py-1 rounded-md border-slate-600 outline-2 outline-orange-300" onClick={handleAscending}>
             <option value="hightest">Ascending</option>
             <option value="lowest">
               Descending

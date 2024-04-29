@@ -73,7 +73,7 @@ const MyList = () => {
                 <th className="text-sm md:text-base lg:text-lg">{idx + 1}</th>
                 <td className="text-sm md:text-base lg:text-lg">{spot.spot}</td>
                 <td className="text-sm md:text-base lg:text-lg">{spot.country}</td>
-                <td className="text-sm md:text-base lg:text-lg">{spot.cost}</td>
+                <td className="text-sm md:text-base lg:text-lg">{spot.cost} BDT</td>
                 <td className="text-sm md:text-base lg:text-lg">{spot.travelTime}</td>
                 <td className="text-sm md:text-base lg:text-lg">
                   <Link
