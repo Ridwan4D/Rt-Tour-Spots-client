@@ -4,7 +4,7 @@ import "react-tooltip/dist/react-tooltip.css";
 const Footer = () => {
   return (
     <div className="my-10">
-      <footer className="grid grid-cols-2 md:grid-cols-3 gap-y-10 px-3 md:p-10 bg-slate-900 text-white">
+      <footer className="grid grid-cols-2 md:grid-cols-4 gap-y-10 px-3 md:p-10 bg-slate-900 text-white">
         <nav className="flex flex-col">
           <h6 className="footer-title">Services</h6>
           <a className="link link-hover">Tour Guid</a>
@@ -30,6 +30,9 @@ const Footer = () => {
           <a className="link link-hover">Terms of use</a>
           <a className="link link-hover">Privacy policy</a>
           <a className="link link-hover">Cookie policy</a>
+        </nav>
+        <nav className="flex flex-col">
+          <img src="../../public/site-logo.PNG" alt="" width="200" />
         </nav>
       </footer>
       <footer className="footer px-10 py-4 border-t bg-slate-900 text-white border-base-300">
