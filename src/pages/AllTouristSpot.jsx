@@ -1,19 +1,27 @@
 import { useLoaderData } from "react-router-dom";
 import AllSpotsCard from "../components/AllSpotsCard";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const AllTouristSpot = () => {
   const loadedSpots = useLoaderData();
   const [spots, setSpots] = useState(loadedSpots);
-  // console.log(loadedSpots);
-  const handleAscending = (e) => {
-    if (e.target.value == "hightest") {
-      setSpots([...spots].sort((a, b) => parseInt(b.cost) - parseInt(a.cost)));
-    }else{
-      setSpots([...spots].sort((a, b) => parseInt(a.cost) - parseInt(b.cost)));
+  const [sort, setSort] = useState(
+    JSON.parse(localStorage.getItem("sorts")) || "hightest"
+  );
+  console.log(sort);
 
-    }
+  const handleSorting = (e) => {
+    localStorage.setItem("sorts", JSON.stringify(e.target.value));
+    const savedSort = JSON.parse(localStorage.getItem("sorts"));
+    setSort(savedSort);
   };
+  useEffect(() => {
+    if (sort == "hightest") {
+      setSpots([...spots].sort((a, b) => parseInt(b.cost) - parseInt(a.cost)));
+    } else if (sort == "lowest") {
+      setSpots([...spots].sort((a, b) => parseInt(a.cost) - parseInt(b.cost)));
+    }
+  }, [sort]);
   return (
     <div>
       <div className="bg-slate-950 py-7  bg-[linear-gradient(to_right,#64748b,#94a3b8,#64748b)]">
@@ -24,11 +32,15 @@ const AllTouristSpot = () => {
       <div>
         <form className="text-center my-10">
           <label htmlFor="sort"></label>
-          <select name="sort" id="sort" className="border-2 px-3 py-1 rounded-md border-slate-600 outline-2 outline-orange-300" onClick={handleAscending}>
+          <select
+            name="sort"
+            id="sort"
+            className="border-2 px-3 py-1 rounded-md border-slate-600 outline-2 outline-orange-300"
+            onClick={handleSorting}
+          >
+            <option value="#" disabled>Sort</option>
             <option value="hightest">Ascending</option>
-            <option value="lowest">
-              Descending
-            </option>
+            <option value="lowest">Descending</option>
           </select>
         </form>
       </div>
