@@ -15,7 +15,7 @@ const AllSpotsCard = ({ theSpot }) => {
 
   return (
     <div>
-      <div className="rounded-md shadow-lg hover:scale-105 transition-all sm:w-96 dark:bg-gray-50 dark:text-gray-800 border-2">
+      <div className="rounded-md shadow-lg hover:scale-105 transition-all w-auto dark:bg-gray-50 dark:text-gray-800 border-2">
         <div className="flex items-center justify-between p-3">
           <div className="flex items-center space-x-2">
             <div className="-space-y-1 ">

@@ -9,7 +9,7 @@ const Banner = () => {
           className="carousel-item h-[70vh] z-1 relative w-full bg-[linear-gradient(180deg,rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(../../public/banner-1.jpg)] bg-cover bg-center bg-no-repeat"
         >
           <div className="z-100 flex flex-col justify-center items-center w-full">
-            <h3 className="text-5xl font-extrabold text-blue-300">
+            <h3 className="text-3xl md:text-5xl font-extrabold text-blue-300">
               We Welcome You<span className="text-yellow-200"> To Bali</span>
             </h3>
             <p className="md:text-center lg:px-40 text-gray-200 font-semibold">

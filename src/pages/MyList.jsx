@@ -50,8 +50,8 @@ const MyList = () => {
   return (
     <div>
       <Fade direction="right">
-        <div className="my-5 border-l-8 border-b-8 border-gray-800 pl-1 pb-1">
-          <h3 className="text-3xl font-bold">Tourist Spots You Have Added</h3>
+        <div className="my-5 border-l-4 md:border-l-8 border-b-4 md:border-b-8 border-gray-800 pl-1 pb-1">
+          <h3 className="text-xl md:text-3xl font-bold">Tourist Spots You Have Added</h3>
         </div>
       </Fade>
       <div className="overflow-x-auto">
@@ -70,12 +70,12 @@ const MyList = () => {
           <tbody>
             {spots.map((spot, idx) => (
               <tr key={idx} className="hover">
-                <th className="text-lg">{idx + 1}</th>
-                <td className="text-lg">{spot.spot}</td>
-                <td className="text-lg">{spot.country}</td>
-                <td className="text-lg">{spot.cost}</td>
-                <td className="text-lg">{spot.travelTime}</td>
-                <td className="text-lg">
+                <th className="text-sm md:text-base lg:text-lg">{idx + 1}</th>
+                <td className="text-sm md:text-base lg:text-lg">{spot.spot}</td>
+                <td className="text-sm md:text-base lg:text-lg">{spot.country}</td>
+                <td className="text-sm md:text-base lg:text-lg">{spot.cost}</td>
+                <td className="text-sm md:text-base lg:text-lg">{spot.travelTime}</td>
+                <td className="text-sm md:text-base lg:text-lg">
                   <Link
                     to={`/updateSpots/${spot._id}`}
                     className="btn text-lg my-anchor-elements"

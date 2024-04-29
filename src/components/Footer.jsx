@@ -44,7 +44,7 @@ const Footer = () => {
         </aside>
         <nav className="md:place-self-center md:justify-self-end">
           <div className="grid grid-flow-col gap-4">
-            <p>© Copyright Reserved by The Reez Family.</p>
+            <p>© Copyright Reserved by Tour Guide BD.</p>
           </div>
         </nav>
       </footer>

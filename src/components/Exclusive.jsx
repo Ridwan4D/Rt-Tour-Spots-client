@@ -1,9 +1,21 @@
 const Exclusive = () => {
   return (
     <div>
-      <section className="px-5 py-10 dark:bg-gray-100 dark:text-gray-800">
+      <div className="text-center space-y-3 my-6 md:my-7">
+        <h3 className="text-3xl">Exclusive</h3>
+        <p className="text-start md:text-center text-sm">
+          Discover unparalleled luxury and tailor-made experiences with our
+          exclusive tour website. We curate unforgettable journeys that blend
+          opulence with authenticity, offering discerning travelers a chance to
+          explore the world in style. From private villa retreats in exotic
+          locales to VIP access to hidden gems, every aspect of your journey is
+          meticulously crafted to exceed expectations. Elevate your travel
+          experience and embark on a voyage of discovery with us.
+        </p>
+      </div>
+      <section className="px-5 py-2 dark:bg-gray-100 dark:text-gray-800">
         <div className="container grid grid-cols-12 mx-auto gap-y-6 md:gap-10">
-          <div className="flex flex-col justify-between col-span-12 py-2 space-y-8 md:space-y-16 md:col-span-3">
+          <div className="flex flex-col justify-between col-span-12 py-2 space-y-8 md:space-y-16 md:col-span-12 lg:col-span-3">
             <div className="py-2 xl:col-span-3 lg:col-span-4 lg:block">
               <div className="mb-8 space-x-5 border-b-2 border-opacity-10 dark:border-default-600">
                 <p className="text-sm font-semibold text-gray-400">Exclusive</p>
@@ -116,7 +128,7 @@ const Exclusive = () => {
             </div>
           </div>
           <div
-            className="relative flex col-span-12 dark:bg-gray-500 bg-center bg-no-repeat bg-cover xl:col-span-6 lg:col-span-5 md:col-span-9 min-h-96"
+            className="relative flex col-span-12 dark:bg-gray-500 bg-center bg-no-repeat bg-cover xl:col-span-6 lg:col-span-5 md:col-span-12 min-h-96"
             style={{
               backgroundImage:
                 "url('https://www.penanghill.gov.my/images/Announcement/2022/Picture1.jpg')",
@@ -126,8 +138,8 @@ const Exclusive = () => {
               Penang, Malaysia
             </span>
           </div>
-          <div className="flex flex-col justify-between col-span-12 py-2 space-y-8 md:space-y-16 md:col-span-3">
-            <div className="py-2 xl:col-span-3 lg:col-span-4 lg:block">
+          <div className="flex flex-col justify-between col-span-12 py-2 space-y-8 md:space-y-16 md:col-span-12 lg:col-span-3">
+            <div className="py-2 xl:col-span-3 lg:col-span-4">
               <div className="mb-8 space-x-5 border-b-2 border-opacity-10 dark:border-default-600">
                 <button
                   type="button"
@@ -142,7 +154,7 @@ const Exclusive = () => {
                   Popular
                 </button>
               </div>
-              <div className="py-2 col-span-12 xl:col-span-3 lg:col-span-4 md:hidden lg:block">
+              <div className="py-2 col-span-12 xl:col-span-3 lg:col-span-4">
                 <div className="flex px-1 py-4">
                   <img
                     alt=""

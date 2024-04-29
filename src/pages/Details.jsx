@@ -55,45 +55,47 @@ const Details = () => {
               </svg>
             </div>
           </div>
-          <div className="flex flex-col col-span-12 p-3 divide-y lg:col-span-6 lg:p-10 bg-slate-900 text-gray-300">
+          <div className="flex flex-col col-span-12 p-3 divide-y lg:col-span-6 lg:p-10 bg-slate-900 text-gray-100">
             <div className="pt-6 pb-4 space-y-2">
-              <h1 className="text-3xl font-bold bg-slate-950 bg-[linear-gradient(to_right,#1c263b,#ffffff,#1c263b)] px-5 py-2">
+              <h1 className="text-3xl font-bold bg-[linear-gradient(to_right,#1c263b,#e2e8f0,#1c263b)] px-5 py-2">
                 {spot}
               </h1>
               <span className=" text-2xl font-medium hover:border-b-4 border-slate-950">
                 {country}
               </span>
-              <p className="text-white text-xl font-medium">{location}</p>
-              <p className="text-white text-xl">
+              <p className="text-white text-sm md:text-xl font-medium">
+              <span className="text-slate-500 font-medium">Location:</span>
+              {location}</p>
+              <p className="text-white text-sm md:text-xl">
                 <span className="text-slate-500 font-medium">Cost:</span> {cost}
               </p>
 
-              <p className="text-white text-xl">
+              <p className="text-white text-sm md:text-xl">
                 <span className="text-slate-500 font-medium">Season:</span>{" "}
                 {season}
               </p>
-              <p className="text-white text-xl">
+              <p className="text-white text-sm md:text-xl">
                 <span className="text-slate-500 font-medium">
                   Every Year Visitors:
                 </span>
                 {perYearVisitor}
               </p>
-              <p className="text-white text-xl">
+              <p className="text-white text-sm md:text-xl">
                 <span className="text-slate-500 font-medium">
                   Needed Time to Visit:
                 </span>
                 {travelTime}
               </p>
-              <p className="text-white text-xl">
+              <p className="text-white text-sm md:text-xl">
                 <span className="text-slate-500 font-medium">User: </span>
                 {userName}
               </p>
-              <p className="text-white text-xl">
+              <p className="text-white text-sm md:text-xl">
                 <span className="text-slate-500 font-medium">Email: </span>
                 {userEmail}
               </p>
               <div>
-                <p className="text-white text-xl font-medium">Description:</p>
+                <p className="text-white text-sm md:text-xl font-medium">Description:</p>
                 {description}
               </div>
               <div className="flex md:justify-end mt-6">

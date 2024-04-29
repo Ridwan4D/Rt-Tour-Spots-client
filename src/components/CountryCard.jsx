@@ -5,7 +5,7 @@ const CountryCard = ({ country }) => {
   const { country_name, image, description } = country;
   return (
     <Link to={`/countrySpots/${country_name}`}>
-      <div className="max-w-lg p-4 rounded-md shadow-lg  bg-[linear-gradient(to_bottom,#cbd5e1,#e2e8f0)] dark:bg-gray-50 dark:text-gray-800">
+      <div className="max-w-lg p-4 rounded-md shadow-lg  bg-[linear-gradient(to_bottom,#cbd5e1,#e2e8f0)] dark:bg-black dark:text-gray-800">
         <div className="space-y-4">
           <div className="space-y-2">
             <img
