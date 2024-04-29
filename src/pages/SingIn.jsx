@@ -12,7 +12,7 @@ const SingIn = () => {
   const [inError, setInError] = useState("");
   const location = useLocation();
   const navigate = useNavigate();
-  console.log(location);
+  // console.log(location);
 
 
   // sign up with app

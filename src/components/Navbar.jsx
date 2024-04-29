@@ -82,6 +82,18 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               {navLinks}
+              <li className="text-white">
+              <Link to="/signIn">
+                <button className="px-4 bg-slate-800 py-1 rounded-sm hover:bg-white hover:border-b-4 hover:rounded-xl hover:border-gray-900 hover:text-slate-900">
+                  Sign In
+                </button>
+              </Link>
+              <Link to="/signUp">
+                <button className="px-4 bg-slate-800 py-1 rounded-sm hover:bg-white hover:border-b-4 hover:rounded-xl hover:border-gray-900 hover:text-slate-900">
+                  Sign Up
+                </button>
+              </Link>
+            </li>
               <li className="md:hidden">
                 <label className="flex cursor-pointer gap-2">
                   <svg
@@ -207,7 +219,7 @@ const Navbar = () => {
               </div>
             </div>
           ) : (
-            <div className="text-white space-x-2">
+            <div className="hidden md:block text-white space-x-2">
               <Link to="/signIn">
                 <button className="px-4 bg-slate-800 py-1 rounded-sm hover:bg-white hover:border-b-4 hover:rounded-xl hover:border-gray-900 hover:text-slate-900">
                   Sign In

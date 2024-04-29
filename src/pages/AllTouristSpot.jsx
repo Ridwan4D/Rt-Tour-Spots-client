@@ -8,7 +8,7 @@ const AllTouristSpot = () => {
   const [sort, setSort] = useState(
     JSON.parse(localStorage.getItem("sorts")) || "hightest"
   );
-  console.log(sort);
+  // console.log(sort);
 
   const handleSorting = (e) => {
     localStorage.setItem("sorts", JSON.stringify(e.target.value));
@@ -38,7 +38,7 @@ const AllTouristSpot = () => {
             className="border-2 px-3 py-1 rounded-md border-slate-600 outline-2 outline-orange-300"
             onClick={handleSorting}
           >
-            <option value="#" disabled>Sort</option>
+            <option value="#">Sort</option>
             <option value="hightest">Ascending</option>
             <option value="lowest">Descending</option>
           </select>
