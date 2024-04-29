@@ -6,7 +6,7 @@ import { MdSystemUpdate } from "react-icons/md";
 import userLogo from "../assets/user.png";
 
 const Navbar = () => {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState(JSON.parse(localStorage.getItem("theme")) || "light");
   const { user, logout } = useContext(AuthContext);
   const navigate = useNavigate();
   // console.log("The user: ", user);

@@ -49,7 +49,7 @@ const router = createBrowserRouter([
         path: "/addSpots",
         element: (
           <PrivetRoute>
-            <AddSpot></AddSpot>,
+            <AddSpot></AddSpot>
           </PrivetRoute>
         ),
       },
@@ -57,7 +57,7 @@ const router = createBrowserRouter([
         path: "/myList",
         element: (
           <PrivetRoute>
-            <MyList></MyList>,
+            <MyList></MyList>
           </PrivetRoute>
         ),
       },
@@ -71,7 +71,7 @@ const router = createBrowserRouter([
         path: "/details/:id",
         element: (
           <PrivetRoute>
-            <Details></Details>,
+            <Details></Details>
           </PrivetRoute>
         ),
         loader: ()=>fetch(`http://localhost:5000/allPlace/`)
