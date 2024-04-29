@@ -12,6 +12,7 @@ const AllSpotsCard = ({ theSpot }) => {
     spot,
     travelTime,
   } = theSpot;
+  // console.log(typeof cost);
 
   return (
     <div>
@@ -103,7 +104,7 @@ const AllSpotsCard = ({ theSpot }) => {
           <div className="space-y-2 text-slate-950">
             <p className="text-sm bg-gradient-to-r from-slate-200 font-medium to-slate-50">
               <span className="text-base font-semibold">Cost: </span>
-              {cost}
+              {cost} BDT
             </p>
             <p className="text-sm bg-gradient-to-r from-slate-200 font-medium to-slate-50">
               <span className="text-base font-semibold">Season: </span>
