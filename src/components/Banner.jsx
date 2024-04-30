@@ -6,7 +6,7 @@ const Banner = () => {
       <div className="carousel w-full">
         <div
           id="slide1"
-          className="carousel-item h-[70vh] z-1 relative w-full bg-[linear-gradient(180deg,rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(../../public/banner-1.jpg)] bg-cover bg-center bg-no-repeat"
+          className="carousel-item h-[70vh] z-1 relative w-full bg-[linear-gradient(180deg,rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('https://i.ibb.co/kqf0T96/banner-1.jpg')] bg-cover bg-center bg-no-repeat"
         >
           <div className="z-100 flex flex-col justify-center items-center w-full">
             <h3 className="text-3xl md:text-5xl font-extrabold text-blue-300">
@@ -43,7 +43,7 @@ const Banner = () => {
         </div>
         <div
           id="slide2"
-          className="carousel-item relative w-full bg-[linear-gradient(180deg,rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(../../public/banner-2.jpg)] bg-cover bg-center bg-no-repeat"
+          className="carousel-item relative w-full bg-[linear-gradient(180deg,rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('https://i.ibb.co/Qb7smyy/banner-2.jpg')] bg-cover bg-center bg-no-repeat"
         >
           <div className="z-100 flex flex-col justify-center items-center w-full">
             <h3 className="text-center text-5xl font-extrabold text-blue-300">
@@ -82,7 +82,7 @@ const Banner = () => {
         </div>
         <div
           id="slide3"
-          className="carousel-item relative w-full bg-[linear-gradient(180deg,rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(../../public/banner-3.jpg)] bg-cover bg-center bg-no-repeat"
+          className="carousel-item relative w-full bg-[linear-gradient(180deg,rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('https://i.ibb.co/ns9QN7h/banner-3.jpg')] bg-cover bg-center bg-no-repeat"
         >
           <div className="z-100 flex flex-col justify-center items-center w-full">
             <h3 className="text-center text-5xl font-extrabold text-blue-300">

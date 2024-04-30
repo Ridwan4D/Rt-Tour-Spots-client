@@ -24,7 +24,7 @@ const navigate = useNavigate();
     const spotInfo ={image,spot,country,location,cost,season,travelTime,perYearVisitor,userName,userEmail,description}
     // console.log(spotInfo);
 
-    fetch("http://localhost:5000/addSpots",{
+    fetch("https://tourist-spot-server-smoky.vercel.app/addSpots",{
         method:'POST',
         headers:{"Content-type":"application/json"},
         body: JSON.stringify(spotInfo)

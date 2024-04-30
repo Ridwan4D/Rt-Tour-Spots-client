@@ -27,7 +27,7 @@ const router = createBrowserRouter([
       {
         path: "/allSpots",
         element: <AllTouristSpot></AllTouristSpot>,
-        loader: () => fetch("http://localhost:5000/allPlace"),
+        loader: () => fetch("https://tourist-spot-server-smoky.vercel.app/allPlace"),
       },
       {
         path: "/signIn",
@@ -65,7 +65,7 @@ const router = createBrowserRouter([
         path: "/updateSpots/:id",
         element: <UpdateSpotDetails></UpdateSpotDetails>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/allPlace/${params.id}`),
+          fetch(`https://tourist-spot-server-smoky.vercel.app/allPlace/${params.id}`),
       },
       {
         path: "/details/:id",
@@ -74,7 +74,7 @@ const router = createBrowserRouter([
             <Details></Details>
           </PrivetRoute>
         ),
-        loader: ()=>fetch(`http://localhost:5000/allPlace/`)
+        loader: ()=>fetch(`https://tourist-spot-server-smoky.vercel.app/allPlace/`)
       },
       {
         path: "/countrySpots/:country",
@@ -83,7 +83,7 @@ const router = createBrowserRouter([
             <SpotsOfCountry></SpotsOfCountry>
           </PrivetRoute>
         ),
-        loader: ()=>fetch(`http://localhost:5000/allPlace/`)
+        loader: ()=>fetch(`https://tourist-spot-server-smoky.vercel.app/allPlace/`)
       },
     ],
   },

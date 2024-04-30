@@ -4,7 +4,7 @@ import AllSpotsCard from "./AllSpotsCard";
 const HomeSpots = () => {
   const [spots, setSpots] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/allPlace")
+    fetch("https://tourist-spot-server-smoky.vercel.app/allPlace")
       .then((res) => res.json())
       .then((data) => {
         // console.log(data);

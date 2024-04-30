@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import CardOfCountrySpot from "../components/CardOfCountrySpot";
+import { Helmet } from "react-helmet";
 
 const SpotsOfCountry = () => {
   const { country } = useParams();
   //   console.log(country);
   const [countries, setCountries] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/countrySpots/${country}`)
+    fetch(`https://tourist-spot-server-smoky.vercel.app/countrySpots/${country}`)
       .then((res) => res.json())
       .then((data) => {
         setCountries(data);
@@ -15,6 +16,11 @@ const SpotsOfCountry = () => {
   }, [country]);
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Country Spots- Tour Guide</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <h3 className="text-3xl font-bold my-10 text-slate-700 border-l-8 border-slate-800 pl-1">
         All Spots of <span className="underline">{country}</span>
       </h3>

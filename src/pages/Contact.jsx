@@ -1,6 +1,13 @@
+import { Helmet } from "react-helmet";
+
 const Contact = () => {
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Contact- Tour Guide</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <section className="py-6  bg-[linear-gradient(to_right,#94a3b8,#475569,#94a3b8)] text-gray-300">
         <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
           <div className="py-6 md:py-0 md:px-6">

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "react-tooltip/dist/react-tooltip.css";
+import siteLogo from "../assets/site-logo.png"
 
 const Footer = () => {
   return (
@@ -32,7 +33,7 @@ const Footer = () => {
           <a className="link link-hover">Cookie policy</a>
         </nav>
         <nav className="flex flex-col">
-          <img src="../../public/site-logo.PNG" alt="" width="200" />
+          <img src={siteLogo} alt="" width="200" />
         </nav>
       </footer>
       <footer className="footer px-10 py-4 border-t bg-slate-900 text-white border-base-300">

@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import AllSpotsCard from "../components/AllSpotsCard";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 
 const AllTouristSpot = () => {
   const loadedSpots = useLoaderData();
@@ -24,6 +25,11 @@ const AllTouristSpot = () => {
   }, [sort]);
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>All Spots- Tour Guide</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <div className="bg-slate-950 py-7  bg-[linear-gradient(to_right,#64748b,#94a3b8,#64748b)]">
         <h2 className="text-xl md:text-3xl font-bold text-center text-slate-700 dark:text-slate-200">
           All The Tourist Spot is here

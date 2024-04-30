@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { updateProfile } from "firebase/auth";
 import { GoogleAuthProvider, GithubAuthProvider } from "firebase/auth";
+import { Helmet } from "react-helmet";
 
 const SignUp = () => {
   const { signUpUser, singUpWithApp } = useContext(AuthContext);
@@ -85,6 +86,11 @@ const SignUp = () => {
 
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>SingUp- Tour Guide</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <div className="flex">
         <div className="hidden lg:flex items-center justify-center flex-1 bg-white text-black">
           <div className="max-w-md text-center">

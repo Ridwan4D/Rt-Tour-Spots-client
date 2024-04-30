@@ -4,11 +4,12 @@ import HomeSpots from "../components/HomeSpots";
 import CountryCard from "../components/CountryCard";
 import Exclusive from "../components/Exclusive";
 import Review from "./Review";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   const [countries, setCountries] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/allCountry")
+    fetch("https://tourist-spot-server-smoky.vercel.app/allCountry")
       .then((res) => res.json())
       .then((data) => {
         setCountries(data);
@@ -16,6 +17,11 @@ const Home = () => {
   }, []);
   return (
     <div className="space-y-16">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Home- Tour Guide</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <Banner></Banner>
       <hr className="border border-dashed" />
       {/* tourist spots section */}

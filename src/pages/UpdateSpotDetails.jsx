@@ -34,7 +34,7 @@ const UpdateSpotDetails = () => {
     };
     // console.log(spotInfo);
 
-    fetch(`http://localhost:5000/addSpots/${loadedSpot._id}`, {
+    fetch(`https://tourist-spot-server-smoky.vercel.app/addSpots/${loadedSpot._id}`, {
       method: "PUT",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(spotInfo),

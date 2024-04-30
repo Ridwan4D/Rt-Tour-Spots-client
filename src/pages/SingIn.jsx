@@ -4,6 +4,7 @@ import { AuthContext } from "../provider/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
 import gitLogo from "../assets/github.png";
+import { Helmet } from "react-helmet";
 
 const SingIn = () => {
   const { signInUser, singUpWithApp } = useContext(AuthContext);
@@ -55,6 +56,11 @@ const SingIn = () => {
   };
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>SingIn- Tour Guide</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <div className="antialiased bg-slate-200 py-7">
         <div className="max-w-lg mx-auto my-10 bg-white px-8 py-2 rounded-xl shadow shadow-slate-300">
           <h1 className="text-4xl font-medium">Login</h1>
