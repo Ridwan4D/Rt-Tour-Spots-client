@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { IoMdArrowBack } from "react-icons/io";
 import { Link, useLoaderData, useParams } from "react-router-dom";
 
@@ -21,6 +22,11 @@ const Details = () => {
 
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Details fo {spot}- Tour Guide</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <div
         className="dark:bg-gray-100 dark:text-gray-900"
         data-aos="zoom-in"

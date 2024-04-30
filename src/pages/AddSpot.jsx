@@ -1,5 +1,6 @@
 // import { useContext } from "react";
 // import { AuthContext } from "../provider/AuthProvider";\
+import { Helmet } from "react-helmet";
 import toast, { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
@@ -41,6 +42,11 @@ const navigate = useNavigate();
   }
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Add Spots- Tour Guide</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <section className="bg-[linear-gradient(to_bottom,#cbd5e1,#e2e8f0)] dark:bg-gray-900 border-2 rounded-lg lg:mb-20">
         <div className="py-8 px-4 mx-auto max-w-5xl lg:py-16">
           <h2 className="mb-8 underline text-center text-3xl font-bold text-slate-700 dark:text-white">

@@ -5,6 +5,7 @@ import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
 import { Tooltip } from "react-tooltip";
 import { Fade } from "react-awesome-reveal";
+import { Helmet } from "react-helmet";
 
 const MyList = () => {
   const { user } = useContext(AuthContext);
@@ -49,6 +50,11 @@ const MyList = () => {
   };
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>My List- Tour Guide</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <Fade direction="right">
         <div className="my-5 border-l-4 md:border-l-8 border-b-4 md:border-b-8 border-gray-800 pl-1 pb-1">
           <h3 className="text-xl md:text-3xl font-bold">Tourist Spots You Have Added</h3>
