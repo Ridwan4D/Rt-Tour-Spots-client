@@ -50,7 +50,7 @@ const AllTouristSpot = () => {
           </select>
         </form>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-10 md:gap-x-8 gap-y-3 md:gap-y-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-10 md:gap-x-8 gap-y-6 md:gap-y-10">
         {spots.map((theSpot, idx) => (
           <AllSpotsCard key={idx} theSpot={theSpot}></AllSpotsCard>
         ))}

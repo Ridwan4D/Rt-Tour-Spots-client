@@ -39,7 +39,7 @@ const Home = () => {
             let us be your guide to the wonders of the world
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-10 gap-y-10 gap-x-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-10 gap-y-6 gap-x-5">
           {countries.map((country, idx) => (
             <CountryCard key={idx} country={country}></CountryCard>
           ))}

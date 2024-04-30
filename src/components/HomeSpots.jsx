@@ -24,7 +24,7 @@ const HomeSpots = () => {
           embark on a journey of discovery with us!
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-10 md:gap-x-8 md:gap-y-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-10 md:gap-x-8 gap-y-6 md:gap-y-10">
         {spots.slice(0,6).map((theSpot, idx) => (
           <AllSpotsCard key={idx} theSpot={theSpot}></AllSpotsCard>
         ))}
