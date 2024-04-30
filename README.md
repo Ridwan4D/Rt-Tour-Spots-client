@@ -10,6 +10,7 @@ Currently, two official plugins are available:
 ## Usage
 -React Awesome reveal
 -React-tooltip
+-
 
 ## Features
 -It's a tour guid based project
@@ -22,6 +23,7 @@ Currently, two official plugins are available:
 -User can add own place
 -User will have personal list of his/her addition
 -Slider with valuable information
+-
 
 
 ## Links
