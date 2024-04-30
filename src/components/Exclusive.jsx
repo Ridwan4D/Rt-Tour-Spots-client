@@ -3,7 +3,7 @@ const Exclusive = () => {
     <div>
       <div className="text-center space-y-3 my-6 md:my-7">
         <h3 className="text-3xl">Exclusive</h3>
-        <p className="text-start md:text-center text-sm">
+        <p className="text-start md:text-center text-xs md:text-sm">
           Discover unparalleled luxury and tailor-made experiences with our
           exclusive tour website. We curate unforgettable journeys that blend
           opulence with authenticity, offering discerning travelers a chance to

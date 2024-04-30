@@ -5,7 +5,7 @@ import siteLogo from "../assets/site-logo.png"
 const Footer = () => {
   return (
     <div className="my-10">
-      <footer className="grid grid-cols-2 md:grid-cols-4 gap-y-10 px-3 md:p-10 bg-slate-900 text-white">
+      <footer className="grid grid-cols-1 m pb-3 md:grid-cols-4 gap-y-10 px-3 md:p-10 bg-slate-900 text-white">
         <nav className="flex flex-col">
           <h6 className="footer-title">Services</h6>
           <a className="link link-hover">Tour Guid</a>
@@ -36,7 +36,7 @@ const Footer = () => {
           <img src={siteLogo} alt="" width="200" />
         </nav>
       </footer>
-      <footer className="footer px-10 py-4 border-t bg-slate-900 text-white border-base-300">
+      <footer className="footer px-4 md:px-10 py-4 border-t bg-slate-900 text-white border-base-300">
         <aside className="items-center font-medium text-lg grid-flow-col">
           <p className="cursor-pointer text-gray-600 hover:text-white">
             PRIVACY
