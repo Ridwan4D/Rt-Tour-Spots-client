@@ -8,22 +8,22 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 ## Usage
--React Awesome reveal
--React-tooltip
--
+- React Awesome reveal
+- React-tooltip
+
 
 ## Features
--It's a tour guid based project
--From this you can get ideas about different places
--Connected With Database
--Full responsive
--Firebase used for user security
--Light mood Dark mood
--Sort list
--User can add own place
--User will have personal list of his/her addition
--Slider with valuable information
--
+- It's a tour guid based project
+- From this you can get ideas about different places
+- Connected With Database
+- Full responsive
+- Firebase used for user security
+- Light mood Dark mood
+- Sort list
+- User can add own place
+- User will have personal list of his/her addition
+- Slider with valuable information
+
 
 
 ## Links
