@@ -1,11 +1,4 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 ## Usage
 - React Awesome reveal
@@ -23,6 +16,13 @@ Currently, two official plugins are available:
 - User can add own place
 - User will have personal list of his/her addition
 - Slider with valuable information
+
+## If you want to run this project in your device
+- clone the repo.
+- also clone the backend repo.
+- download node modules.
+- and run it.
+
 
 
 
